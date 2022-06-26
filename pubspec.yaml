@@ -9,8 +9,11 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  axios: ^1.0.1+1
   flutter:
     sdk: flutter
+  web3dart: ^2.3.5
+  web_socket_channel: ^2.2.0
 
 dev_dependencies:
   flutter_test:

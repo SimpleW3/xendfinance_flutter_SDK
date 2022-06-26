@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:xendfinance_flutter_sdk/xendfinance_flutter_sdk.dart';
+import 'package:xendfinance_flutter_sdk/init.dart';
 
 void main() {
   test('adds one to input values', () {
