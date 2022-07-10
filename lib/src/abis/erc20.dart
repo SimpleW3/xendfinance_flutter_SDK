@@ -1,4 +1,4 @@
-[
+const erc20 = '''[
 	{
 		"constant": false,
 		"inputs": [
@@ -26,3 +26,4 @@
 		"type": "function"
 	}
 ]
+''';

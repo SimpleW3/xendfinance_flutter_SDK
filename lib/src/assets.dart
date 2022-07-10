@@ -1,3 +1,6 @@
+import 'abis/erc20.dart';
+import 'abis/xvault_bsc/usdc.dart';
+
 class Asset {
   Asset(
       this.name,
@@ -50,8 +53,8 @@ const uSDTMATIC = "0xc2132D05D31c914a87C6611C10748AEb04B58e8F";
 const uSDCMATIC = "0x2791bca1f2de4661ed88a30c99a7a9449aa84174";
 
 List<Asset> layer2Assets = [
-  Asset("USDC", '', uSDCBSC, 'src/abis/ER20.json', "xVault", uSDCBSCXVault,
-      'src/abis/xvault/usdc.json', 56, 18, 36, 'pricePerShare'),
+  Asset("USDC", '', uSDCBSC, erc20, "xVault", uSDCBSCXVault, xvaultUsdc, 56, 18,
+      36, 'pricePerShare'),
 ];
 
 // {

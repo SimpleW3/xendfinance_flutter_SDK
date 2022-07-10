@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:xendfinance_flutter_sdk/xendfinance_flutter_sdk.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+Future main() async {
+  await dotenv.load(fileName: '.env');
   runApp(const MyApp());
 }
 
@@ -9,9 +11,12 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   void onclick() async {
-    XAuto protocol = XAuto(56, 'xVault');
-    final ew = await protocol.ppfs('USDC');
-    print(ew);
+    String privateKey = dotenv.get('PK', fallback: '');
+    XAuto protocol = XAuto(56, 'xVault', privateKey);
+    // final ew = await protocol.ppfs('USDC');
+    // print(ew);
+    final approval = await protocol.approve('USDC', 4);
+    print(approval);
   }
 
   @override
