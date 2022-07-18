@@ -1,5 +1,7 @@
 import 'abis/erc20.dart';
 import 'abis/xvault_bsc/usdc.dart';
+import 'abis/xvault_bsc/busd.dart';
+import 'abis/xvault_bsc/usdt.dart';
 
 class Asset {
   Asset(
@@ -55,47 +57,11 @@ const uSDCMATIC = "0x2791bca1f2de4661ed88a30c99a7a9449aa84174";
 List<Asset> layer2Assets = [
   Asset("USDC", '', uSDCBSC, erc20, "xVault", uSDCBSCXVault, xvaultUsdc, 56, 18,
       36, 'pricePerShare'),
+  Asset("USDT", '', uSDTBSC, erc20, "xVault", uSDTBSCXVault, xvaultUsdt, 56, 18,
+      36, 'pricePerShare'),
+  Asset("BUSD", '', bUSDBSC, erc20, 'xVault', bUSDBSCXVault, xvaultBusd, 56, 18,
+      36, 'pricePerShare')
 ];
-
-// {
-// 	'name': "USDC",
-// 	'logo': "",
-// 	'tokenAddress': USDC_BSC,
-// 	'tokenAbi': ABIS.ERC20,
-// 	'protocolName': "xVault",
-// 	'protocolAddress': USDC_BSC_XVault,
-// 	'protocolAbi': ABIS.xvVaultUSDCV2,
-// 	'network': 56,
-// 	'decimals': 18,
-// 	'widthdrawDecimals': 36,
-// 	'ppfsMethod': 'pricePerShare',
-// },
-// {
-// 	'name': "USDT",
-// 	'logo': "",
-// 	'tokenAddress': USDT_BSC,
-// 	'tokenAbi': ABIS.ERC20,
-// 	'protocolName': "xVault",
-// 	'protocolAddress': USDT_BSC_XVault,
-// 	'protocolAbi': ABIS.xvVaultUSDTV2,
-// 	'network': 56,
-// 	'decimals': 18,
-// 	'widthdrawDecimals': 36,
-// 	'ppfsMethod': 'pricePerShare',
-// },
-// {
-// 	'name': "BUSD",
-// 	'logo': "",
-// 	'tokenAddress': BUSD_BSC,
-// 	'tokenAbi': ABIS.ERC20,
-// 	'protocolName': "xVault",
-// 	'protocolAddress': BUSD_BSC_XVault,
-// 	'protocolAbi': ABIS.xvVaultBUSDV2,
-// 	'network': 56,
-// 	'decimals': 18,
-// 	'widthdrawDecimals': 36,
-// 	'ppfsMethod': 'pricePerShare',
-// },
 
 // {
 // 	'name': "BUSD",

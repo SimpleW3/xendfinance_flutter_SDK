@@ -5,11 +5,11 @@ import 'create_contract.dart';
 import 'utils.dart';
 
 class XAuto {
-  XAuto(this.chainId, this.protocol, this.privateKey);
+  XAuto(this.chainId, this.privateKey);
   var assets = layer2Assets;
   final int chainId;
-  final String protocol;
   final String privateKey;
+  final String protocol = "xAuto";
 
   Future<String> approve(String tokenName, num amount) async {
     Asset asset = filterToken(tokenName, chainId, protocol);
