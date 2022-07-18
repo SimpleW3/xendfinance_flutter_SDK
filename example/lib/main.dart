@@ -12,11 +12,13 @@ class MyApp extends StatelessWidget {
 
   void onclick() async {
     String privateKey = dotenv.get('PK', fallback: '');
-    XAuto protocol = XAuto(56, 'xVault', privateKey);
+    XVault protocol = XVault(56, privateKey);
     // final ew = await protocol.ppfs('USDC');
     // print(ew);
-    final approval = await protocol.approve('USDC', 4);
+    final approval = await protocol.approve('BUSD', 4);
     print(approval);
+    final deposit = await protocol.deposit('BUSD', 4);
+    print(deposit);
   }
 
   @override
